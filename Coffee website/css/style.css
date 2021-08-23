@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+/*Global declaring*/
+:root {
+  --main-color: #d3ad7f;
+  --bg: #010103;
+  --black: black;
+  --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+* {
+  font-family: "Roboto";
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 30px;
+}
+body {
+  background-color: var(--bg);
+}
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+html::-webkit-scrollbar-track {
+  border-radius: 5rem;
+}
+html::-webkit-slider-thumb {
+  background-color: #fff;
+  border-radius: 5rem;
+}
+.btn {
+  background-color: var(--main-color);
+  color: white;
+  padding: 0.9rem 3rem;
+  font-size: 1.7rem;
+  display: inline-block;
+  margin-top: 1rem;
+  cursor: pointer;
+  border: transparent;
+}
+.btn:hover {
+  letter-spacing: 0.3rem;
+}
+header {
+  background-color: var(--bg);
+  padding: 1.5rem 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  z-index: 1000;
+  border-bottom: var(--border);
+}
+header .logo img {
+  height: 6rem;
+}
+header .navbar a {
+  font-size: 1.6rem;
+  margin: 0 1rem;
+  color: #fff;
+}
+header .navbar a:hover {
+  color: var(--main-color);
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--main-color);
+}
+header .icons div {
+  color: white;
+  font-size: 2.5rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+header .icons div:hover {
+  color: var(--main-color);
+}
+#bars {
+  display: none;
+}
+header .search-form {
+  position: absolute;
+  top: 115%;
+  right: 7%;
+  width: 50rem;
+  height: 5rem;
+  background-color: white;
+  font-size: 1.6rem;
+  align-items: center;
+  display: flex;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+header .search-form.active {
+  transform: scaleY(1);
+}
+header .search-form label {
+  font-size: 2.2rem;
+  margin-right: 1.5rem;
+  padding-left: 5px;
+  color: black;
+  cursor: pointer;
+}
+header .search-form label:hover {
+  color: var(--main-color);
+}
+header .search-form input {
+  padding: 1rem;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  color: black;
+  text-transform: none;
+}
+header .cart-item-container {
+  width: 30%;
+  height: calc(100vh - 9.5rem);
+  background-color: white;
+  top: 100%;
+  position: absolute;
+  right: -100%;
+  padding: 0 1.5rem;
+}
+header .cart-item-container.active {
+  right: 0;
+}
+header .cart-item-container .cart-item {
+  display: flex;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  align-items: center;
+  position: relative;
+}
+header .cart-item-container .cart-item img {
+  height: 7rem;
+}
+header .cart-item-container .cart-item .fa-times {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: black;
+}
+header .cart-item-container .cart-item .fa-times:hover {
+  color: var(--main-color);
+}
+header .cart-item-container .cart-item h3 {
+  font-size: 2rem;
+  padding-bottom: 0.3rem;
+  color: black;
+}
+header .cart-item-container .cart-item div {
+  font-size: 1.5rem;
+  color: var(--main-color);
+}
+header .cart-item-container .btn {
+  width: 100%;
+  text-align: center;
+}
